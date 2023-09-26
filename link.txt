@@ -1,2 +1,22 @@
 https://drive.google.com/drive/folders/1k4EyIwUcJCXmk-vzaqkUt5ighDvCnVux
 https://drive.google.com/file/d/1tUgZeq4E7C27t6syBlmFAV4sKlswGAEk/view?usp=sharing
+
+
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char s[100]; // Define a character array to store the input string
+    
+    // Read the input string from stdin
+    scanf("%[^\n]", s);
+    
+    // Print "Hello, World!" on one line
+    printf("Hello, World!\n");
+    
+    // Print the input string on the next line
+    printf("%s\n", s);
+    
+    return 0; // Return 0 to indicate successful execution
+}
+
