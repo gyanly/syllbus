@@ -129,4 +129,19 @@ int main() {
 }
 
 
+# Read the input
+n = int(input())
+
+# Check if the number is odd
+if n % 2 != 0:
+    print("Weird")
+else:
+    # Number is even, check additional conditions
+    if 2 <= n <= 5:
+        print("Not Weird")
+    elif 6 <= n <= 20:
+        print("Weird")
+    elif n > 20:
+        print("Not Weird")
+
 
