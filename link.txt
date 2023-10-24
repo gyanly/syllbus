@@ -144,4 +144,80 @@ else:
     elif n > 20:
         print("Not Weird")
 
+#Word Count
 
+# Read the number of words
+n = int(input().strip())
+
+# Initialize a dictionary to store word counts and order
+word_counts = {}
+order = []
+
+# Read the words and update the dictionary
+for _ in range(n):
+    word = input().strip()
+    if word in word_counts:
+        word_counts[word] += 1
+    else:
+        word_counts[word] = 1
+        order.append(word)
+
+# Output the number of distinct words
+print(len(order))
+
+# Output the number of occurrences for each distinct word in input order
+print(" ".join(str(word_counts[word]) for word in order))
+
+#Loop
+if __name__ == '__main__':
+    n = int(input())  # Read the integer n
+    for i in range(n):
+        print(i * i)  # Print the square of each number
+
+#If
+
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+
+
+if __name__ == '__main__':   
+    n = int(input())
+
+    if n % 2 == 1:  # Check if n is odd
+        print("Weird")
+    elif n % 2 == 0 and 2 <= n <= 5:  # Check if n is even and in the inclusive range of 2 to 5
+        print("Not Weird")
+    elif n % 2 == 0 and 6 <= n <= 20:  # Check if n is even and in the inclusive range of 6 to 20
+        print("Weird")
+    elif n % 2 == 0 and n > 20:  # Check if n is even and greater than 20
+        print("Not Weird")
+
+
+
+#list comp
+
+if __name__ == '__main__':
+    x = int(input())
+    y = int(input())
+    z = int(input())
+    n = int(input())
+
+    # Generate the list of coordinates using list comprehensions
+    coordinates = [[i, j, k] for i in range(x + 1) for j in range(y + 1) for k in range(z + 1)]
+
+    # Use a list comprehension to filter out coordinates where the sum is not equal to n
+    result = [coordinate for coordinate in coordinates if sum(coordinate) != n]
+
+    # Print the filtered list of coordinates
+    print(result)
+
+#cap
+
+def solve(s):
+    return s.title()
