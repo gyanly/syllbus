@@ -23,7 +23,127 @@ difference=$(echo "$num1 - $num2" | bc)
 product=$(echo "$num1 * $num2" | bc)
 quotient=$(echo "scale=2; $num1 / $num2" | bc)
 
-echo "Sum: $sum"
-echo "Difference: $difference"
-echo "Product: $product"
-echo "Quotient: $quotient"
+#and
+
+#!/bin/bash
+
+age=25
+has_license=true
+
+if [ $age -ge 18 ] && [ "$has_license" = true ]; then
+    echo "You are eligible to drive."
+else
+    echo "You are not eligible to drive."
+fi
+
+#OR
+
+#!/bin/bash
+
+is_weekday=true
+is_holiday=false
+
+if [ "$is_weekday" = true ] || [ "$is_holiday" = true ]; then
+    echo "It's a day off!"
+else
+    echo "It's a regular workday."
+fi
+
+
+#not
+
+#!/bin/bash
+
+is_raining=false
+
+if ! [ "$is_raining" = true ]; then
+    echo "It's not raining; you can go for a walk."
+else
+    echo "It's raining; stay indoors."
+fi
+
+# string comp
+
+string1="apple"
+string2="apple"
+
+if [ "$string1" = "$string2" ]; then
+    echo "Strings are equal."
+fi
+
+#Int Comparision
+
+num1=5
+num2=5
+
+if [ "$num1" -eq "$num2" ]; then
+    echo "Integers are equal."
+fi
+
+
+#elif
+
+#!/bin/bash
+
+num=7
+
+if [ $num -eq 5 ]; then
+    echo "The number is 5."
+elif [ $num -eq 7 ]; then
+    echo "The number is 7."
+elif [ $num -eq 10 ]; then
+    echo "The number is 10."
+else
+    echo "The number is not 5, 7, or 10."
+fi
+
+
+#case Structure:
+
+#!/bin/bash
+
+fruit="apple"
+
+case $fruit in
+    "apple")
+        echo "It's an apple."
+        ;;
+    "banana")
+        echo "It's a banana."
+        ;;
+    "cherry")
+        echo "It's a cherry."
+        ;;
+    *)
+        echo "It's something else."
+        ;;
+esac
+
+
+#while Loop:
+#!/bin/bash
+
+count=1
+while [ $count -le 5 ]; do
+    echo "Iteration $count"
+    count=$((count + 1))
+done
+
+#until Loop:
+
+#!/bin/bash
+
+count=1
+until [ $count -ge 5 ]; do
+    echo "Iteration $count"
+    count=$((count + 1))
+done
+
+
+# for Loop:
+
+#!/bin/bash
+
+for fruit in apple banana cherry; do
+    echo "I like $fruit."
+done
